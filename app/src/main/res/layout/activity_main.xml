@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -36,58 +40,116 @@
     app:layout_constraintTop_toBottomOf="@+id/message"
     app:layout_constraintVertical_bias="0.202">
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
+        android:orientation="vertical"
         android:layout_height="wrap_content">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:id="@+id/linearLayout"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-            <com.github.lzyzsd.circleprogress.CircleProgress
-                android:id="@+id/circle_progressA"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:layout_gravity="center" />
-
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:text="Tank A"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorPrimaryDark" />
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.github.lzyzsd.circleprogress.CircleProgress
+                    android:id="@+id/circle_progressA"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="Tank A"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimaryDark" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.github.lzyzsd.circleprogress.CircleProgress
+                    android:id="@+id/circle_progressB"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="Tank B"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimaryDark" />
+            </LinearLayout>
+
         </LinearLayout>
-
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-            <com.github.lzyzsd.circleprogress.CircleProgress
-                android:id="@+id/circle_progressB"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:layout_gravity="center" />
-
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:text="Tank B"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorPrimaryDark" />
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.github.lzyzsd.circleprogress.CircleProgress
+                    android:id="@+id/circle_progressC"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="Tank C"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimaryDark" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.github.lzyzsd.circleprogress.CircleProgress
+                    android:id="@+id/circle_progressD"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="Tank D"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimaryDark" />
+            </LinearLayout>
 
         </LinearLayout>
 
     </LinearLayout>
+
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
@@ -142,6 +204,49 @@
                     android:layout_height="wrap_content" />
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:layout_width="wrap_content"
+                    android:text="Tank C Level:"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/levelC"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_width="wrap_content"
+                    android:text=""
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:layout_width="wrap_content"
+                    android:text="Tank D Level:"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/levelD"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_width="wrap_content"
+                    android:text=""
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
         </LinearLayout>
     </android.support.v7.widget.CardView>
 
@@ -164,3 +269,4 @@
 
 
 </android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>
